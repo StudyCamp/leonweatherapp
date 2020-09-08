@@ -1,0 +1,299 @@
+
+#message-board {
+	height: 85vh;
+	overflow:auto;
+	position: relative;
+	margin-bottom: 15%;
+}
+
+#message-board::-webkit-scrollbar {
+    display:none;
+}
+
+.scroll-down-text{
+	margin-top: 18%;
+}
+.app-frame {
+	overflow:auto;
+	height: 85vh;
+	padding: 2.5%;
+	background-color: rgb(248, 248, 248);
+}
+
+.app-frame::-webkit-scrollbar {
+    display:none;
+}
+
+.message-board-post {
+	margin-bottom: 2%;
+}
+
+.beta {
+	font-size: 60%;
+}
+.feels-like-value {
+	font-size: 60%;
+}
+
+.timestamp {
+    float: right;
+}
+
+.request_posts {
+	width: 23%;
+	margin-top: 1%;
+	margin-bottom: 0;
+	padding-top: 1%;
+}
+
+.acceptIgnore {
+	float: right;
+}
+
+.request_name {
+	font-size: 120%;
+}
+.list_style {
+    list-style-type: none;
+    padding: 1%;
+	margin: 0.5px;
+	background-color: rgb(238, 238, 238);
+}
+
+
+
+/* Flex */
+
+	.flex {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+
+/* Icon */
+
+	.icon {
+		position: relative;
+	}
+		.icon:before {
+			font-family: FontAwesome;
+			text-transform: none !important;
+		}
+
+
+/* Button "Get started" */
+	.button-start {
+		box-shadow: inset 0 0 0 3px #6cc091;
+		color: #6cc091 !important;
+		border-radius: 30px;
+		border: 0;
+		cursor: pointer;
+		display: inline-block;
+		font-size: .75em;
+		font-weight: 400;
+		height: 3.75em;
+		line-height: 3.85em;
+		letter-spacing: 2px;
+		padding: 0 4em;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+		input[type="button"]:hover,
+		.button-start:hover,
+		.button-start:hover {
+			background-color: rgba(108, 192, 145, 0.15);
+		}
+
+
+/* Banner */
+
+	#banner {
+		padding: 8em 0 9em 0;
+		background-image: url(frontpg.jpg);
+		background-size: cover;
+		background-position: bottom;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		text-align: center;
+        position: relative;
+        margin-bottom: 10%;
+	}
+
+		#banner:before {
+			content: '';
+			background: rgba(75, 75, 93, 0.85);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		#banner .inner {
+			position: relative;
+			z-index: 10005;
+			padding-bottom: 6em;
+		}
+
+		#banner h1 {
+			font-size: 3.5em;
+			font-weight: 400;
+			color: #fff;
+			line-height: 1em;
+			margin: 0 0 1em 0;
+			padding: 0;
+		}
+
+		#banner h3 {
+			font-weight: 400;
+			color: #fff;
+			margin: 0;
+			font-size: 1.5em;
+		}
+
+		#banner .icon {
+			color: #6cc091;
+			font-size: 2em;
+		}
+
+		#banner p {
+			font-size: 1em;
+			color: rgba(255, 255, 255, 0.55);
+			margin-bottom: 1.75em;
+		}
+
+        /* Center banner data */
+		#banner .flex {
+			-ms-flex-pack: center;
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
+			text-align: center;
+			margin: 0 auto 4em auto;
+		}
+
+			#banner .flex div {
+				border-right: 2px solid rgba(255, 255, 255, 0.2);
+				padding: 0 8em;
+			}
+
+				#banner .flex div:last-child {
+					border: none;
+					padding-right: 0;
+				}
+
+				#banner .flex div:first-child {
+					padding-left: 0;
+				}
+
+				#banner .flex div p {
+					margin: 0;
+				}
+
+        /* If screen smaller than 1280px */
+		@media screen and (max-width: 1280px) {
+
+			#banner {
+				padding: 7em 0 6em 0;
+			}
+
+				#banner .inner {
+					padding-top: 6em;
+				}
+
+				#banner h1 {
+					font-size: 3em;
+				}
+
+				#banner h3 {
+					font-size: 1.25em;
+				}
+
+				#banner .flex div {
+					padding: 0 3em;
+				}
+
+		}
+
+        /* If screen smaller than 980px */
+		@media screen and (max-width: 980px) {
+
+			#banner {
+				background-attachment: scroll;
+				padding: 5em 0 4em 0;
+			}
+
+				#banner .inner {
+					padding-top: 4em;
+				}
+
+				#banner h1 {
+					font-size: 2.5em;
+				}
+
+				#banner h3 {
+					font-size: 1.25em;
+				}
+
+				#banner .flex div {
+					font-size: .85em;
+					padding: 0 1.5em;
+				}
+
+		}
+
+        /* If screen smaller than 736 */
+		@media screen and (max-width: 736px) {
+
+			#banner {
+				padding: 4em 0 3em 0;
+			}
+
+				#banner .inner {
+					padding-top: 3em;
+				}
+
+				#banner h1 {
+					font-size: 2em;
+				}
+
+				#banner h3 {
+					font-size: 1.25em;
+				}
+
+				#banner .flex {
+
+					flex-direction: column;
+					margin: 0 auto 2em auto;
+				}
+
+					#banner .flex div {
+						font-size: .85em;
+						padding: 0;
+						border: none;
+						margin-bottom: 1em;
+					}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			#banner h1 {
+				font-size: 1.5em;
+			}
+
+		}
+
+/* Footer */
+
+	#footer {
+		padding: 6em 0;
+		background: #6cc091;
+		color: #fff;
+		text-align: center;
+	}
+

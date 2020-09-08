@@ -1,0 +1,59 @@
+<!-- chat/templates/chat/index.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>{% block title %}WeatherTalk{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <meta charset="utf-8"/>
+    <title>Chat Rooms</title>
+
+    <style>
+        li {
+            margin-bottom: 0.2%;
+        }
+        button {
+            width: 35%;
+            margin-top: 0.3%;
+        }
+        #room-name-input {
+            width: 35%;
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>WeatherTalk Chatroom</h3>
+    <h6>Top rooms:</h6>
+    <ol>
+        <li>Weather</li>
+        <li>Food</li>
+        <li>Sports</li>
+
+
+    </ol>
+    <div class="container">
+        What chat room would you like to enter?<br>
+        <input id="room-name-input" type="text" size="40"><br> 
+        <button id="room-name-submit" type="button" class="btn btn-primary">Enter</button>
+    </div>
+    <script>
+        document.querySelector('#room-name-input').focus();
+        document.querySelector('#room-name-input').onkeyup = function(e) {
+            if (e.keyCode === 13) {  // enter, return
+                document.querySelector('#room-name-submit').click();
+            }
+        };
+
+        document.querySelector('#room-name-submit').onclick = function(e) {
+            var roomName = document.querySelector('#room-name-input').value;
+            window.location.pathname = '/chat/' + roomName + '/';
+        };
+    </script>
+</body>
+</html>

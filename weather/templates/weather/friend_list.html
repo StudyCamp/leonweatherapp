@@ -1,0 +1,24 @@
+{% extends "weather/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    {% for friend in friends %}
+        {% if friend in friend_relations %}
+            <a href="{% url 'weather:profile_page' friend %}">{{ friend }}</a>
+            <br>
+        {% endif %}
+    {% empty %}
+        &nbsp; Go to the <a href="/#start_section">message board</a> to meet some new friends! 
+        &nbsp; &nbsp; <a href="{% url 'weather:friend_request' %}">Friend Requests</a>
+    {% endfor %}
+    {% if friends %}
+    <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; 👉 <a href="{% url 'weather:friend_request' %}">Friend Requests</a>
+    {% endif %}
+
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'weather/profile.js' %}"></script>
+{% endblock %}
