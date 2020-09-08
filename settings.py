@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import django_heroku
+import dj_database_url
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,22 +28,20 @@ SECRET_KEY = 'lx=4fptjra5yuw)31$jqjn08#&9(lh=!i1dkf_-mrc^tb+nsn3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['leonweatherapp.herokuapp.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'chat',
-    'weather',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'chat',
+    'weather',
     'channels'
 ]
 
