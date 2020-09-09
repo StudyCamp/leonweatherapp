@@ -1,0 +1,30 @@
+{% extends "weather/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <br>
+    <h5>Friend Requests 👋</h5>
+    <br>
+    <div class="container">
+        {% for from_person in requested_from_only %}
+        <div class="request_posts rounded">
+            <a class="request_name" href="{% url 'weather:profile_page' from_person %}">{{ from_person }}</a>
+            <span class="acceptIgnore">
+            <button onclick="accept_friend('{{ from_person }}')" id="accept_btn" data-username="{{ from_person }}" type="button" class="btn btn-primary">Accept</button>
+            <button id="ignore" data-username="{{ from_person }}" type="button" class="btn btn-secondary">Ignore</button>
+            </span> 
+            
+            <br>
+            <br>
+        </div>
+        {% empty %}
+            &nbsp; You have no friend requests.
+        {% endfor %}
+
+    </div>
+    
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'weather/profile.js' %}"></script>
+{% endblock %}
