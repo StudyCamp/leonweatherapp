@@ -158,7 +158,7 @@ function compose_post() {
             // Clear form
             document.querySelector('#compose-body').value = '';
             // Refersh
-            window.location.href = 'https://leonweatherapp.herokuapp.com/#start_section';
+            window.location.href = 'https://leonweatherapp.herokuapp.com';
         });
 
 
