@@ -28,7 +28,11 @@ SECRET_KEY = 'lx=4fptjra5yuw)31$jqjn08#&9(lh=!i1dkf_-mrc^tb+nsn3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['leonweatherapp.herokuapp.com']
+=======
+ALLOWED_HOSTS = ['https://leonweatherapp.herokuapp.com']
+>>>>>>> 145f46f72d75c0861791ff9e24e5689ee2a7624a
 
 
 # Application definition

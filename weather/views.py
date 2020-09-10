@@ -201,7 +201,7 @@ def compose(request):
 
 
 
-    
+@csrf_exempt
 def login_view(request):
     if request.method == "POST":
 
@@ -221,12 +221,12 @@ def login_view(request):
     else:
         return render(request, "weather/login.html")
 
-
+@csrf_exempt
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect(reverse("weather:homepage"))
 
-
+@csrf_exempt
 def register(request):
     if request.method == "POST":
         username = request.POST["username"]
